@@ -8,6 +8,25 @@
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
 **Note:** Your controller will automatically use the current context in your kubeconfig file (i.e. whatever cluster `kubectl cluster-info` shows).
 
+### Install Kube builder
+curl -L -o kubebuilder "https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH)"
+chmod +x kubebuilder && mv kubebuilder /usr/local/bin/
+
+### Initialize repository template
+kubebuilder init --domain examplecrd.com --repo github.com/zacharyrgonzales-portfolio/kubebuilder-project-zachsapi
+
+### Create K8s API/Object
+kubebuilder create api --group examplecrd.com --version v1 --kind ZachsAPI
+
+### Create maps/lists to pass into K8s object in api/v1/filename_types.go
+type ZachsAPISpec struct {
+	ZachsPhoneNumber string `json:"zachsPhoneNumber,omitempty"`
+	ZachsAge string `json:"zachsAge,omitempty"`
+}
+
+### Generate yaml manifests in config/crd/bases
+make manifests
+
 ### Running on the cluster
 1. Install Instances of Custom Resources:
 
