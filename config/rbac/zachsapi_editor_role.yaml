@@ -1,0 +1,31 @@
+# permissions for end users to edit zachsapis.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: zachsapi-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kubebuilder-project-zachsapi
+    app.kubernetes.io/part-of: kubebuilder-project-zachsapi
+    app.kubernetes.io/managed-by: kustomize
+  name: zachsapi-editor-role
+rules:
+- apiGroups:
+  - example-crd.com.example-crd.com
+  resources:
+  - zachsapis
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - example-crd.com.example-crd.com
+  resources:
+  - zachsapis/status
+  verbs:
+  - get
