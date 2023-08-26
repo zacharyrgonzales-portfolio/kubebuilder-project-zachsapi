@@ -20,16 +20,9 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
-
-// ZachsAPISpec defines the desired state of ZachsAPI
 type ZachsAPISpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
-
-	// Foo is an example field of ZachsAPI. Edit zachsapi_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	ZachsPhoneNumber string `json:"zachsPhoneNumber,omitempty"`
+	ZachsAge string `json:"zachsAge,omitempty"`
 }
 
 // ZachsAPIStatus defines the observed state of ZachsAPI

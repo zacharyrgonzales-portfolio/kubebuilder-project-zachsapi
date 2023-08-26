@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - examplecrd.com
+  resources:
+  - zachsapis
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - examplecrd.com
+  resources:
+  - zachsapis/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - examplecrd.com
+  resources:
+  - zachsapis/status
+  verbs:
+  - get
+  - patch
+  - update

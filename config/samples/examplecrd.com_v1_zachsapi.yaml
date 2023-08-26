@@ -1,4 +1,4 @@
-apiVersion: example-crd.com.example-crd.com/v1
+apiVersion: examplecrd.com/v1
 kind: ZachsAPI
 metadata:
   labels:

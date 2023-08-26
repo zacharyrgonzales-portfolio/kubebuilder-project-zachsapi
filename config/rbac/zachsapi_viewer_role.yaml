@@ -12,7 +12,7 @@ metadata:
   name: zachsapi-viewer-role
 rules:
 - apiGroups:
-  - example-crd.com.example-crd.com
+  - examplecrd.com
   resources:
   - zachsapis
   verbs:
@@ -20,7 +20,7 @@ rules:
   - list
   - watch
 - apiGroups:
-  - example-crd.com.example-crd.com
+  - examplecrd.com
   resources:
   - zachsapis/status
   verbs:

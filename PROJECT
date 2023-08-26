@@ -2,7 +2,7 @@
 # This file is used to track the info used to scaffold your project
 # and allow the plugins properly work.
 # More info: https://book.kubebuilder.io/reference/project-config.html
-domain: example-crd.com
+domain: examplecrd.com
 layout:
 - go.kubebuilder.io/v4
 projectName: kubebuilder-project-zachsapi
@@ -12,8 +12,8 @@ resources:
     crdVersion: v1
     namespaced: true
   controller: true
-  domain: example-crd.com
-  group: example-crd.com
+  domain: examplecrd.com
+  group: examplecrd.com
   kind: ZachsAPI
   path: github.com/zacharyrgonzales-portfolio/kubebuilder-project-zachsapi/api/v1
   version: v1
