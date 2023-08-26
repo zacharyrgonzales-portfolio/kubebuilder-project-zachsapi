@@ -9,4 +9,6 @@ metadata:
     app.kubernetes.io/created-by: kubebuilder-project-zachsapi
   name: zachsapi-sample
 spec:
-  # TODO(user): Add fields here
+  zachsPhoneNumber: 123
+  zachsAge: 27
+
